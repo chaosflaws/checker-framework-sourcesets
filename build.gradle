@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'org.checkerframework' version '0.6.37'
+}
+
+group = 'de.chaosflaws'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    abcd {}
+}
+
+checkerFramework {
+    checkers = ['org.checkerframework.checker.nullness.NullnessChecker']
+}
+
+apply plugin: 'org.checkerframework'
